@@ -8,46 +8,35 @@ describe('VoterComponent', () => {
   let fixture: ComponentFixture<VoterComponent>;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ VoterComponent ]
-    });
+    // configure testing module through TestBed
+    
 
-    fixture = TestBed.createComponent(VoterComponent);
-    component = fixture.componentInstance;
+    // get component fixture by calling createComponent on TestBed
+
+
+    // get component instance through componentInstance property on the fixture.
+    
+
   });
 
+  // String Binding
   it('should render total votes', () => {
 
-    component.othersVote = 20;
-    component.myVote = 1;
-    fixture.detectChanges();
-
-    let de = fixture.debugElement.query(By.css('.vote-count'));
-    let el: HTMLElement = de.nativeElement;
-
-    expect(el.innerText).toContain('21');
+    
 
   });
 
+  // Property Binding
   it('should highlight the upVote button if I have upVoted', () => {
 
-    component.myVote = 1;
-    fixture.detectChanges();
-
-    let de = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
-    let el: HTMLElement = de.nativeElement;
-
-    expect(el.classList.contains('highlighted')).toBeTruthy();
+    
 
   });
 
+  // Event Binding
   it('should increase the total votes when I click the upvote button', () => {
 
-    let button = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
-    button.triggerEventHandler('click', null);
-
-    expect(component.myVote).toBe(1);
-    expect(component.totalVotes).toBe(1);
+    
 
   });
 

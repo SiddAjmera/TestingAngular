@@ -4,17 +4,11 @@ describe('VoteComponent', () => {
 
   let voteComponent: VoteComponent;
 
-  beforeEach(() => {
-    voteComponent = new VoteComponent();
-  });
-
   describe('upVote function', () => {
 
-    it('should increment the totalVotes property set on the component', () => {
+    it('should', () => {
 
-      voteComponent.upVote();
-
-      expect(voteComponent.totalVotes).toEqual(1);
+      
 
     });
 
@@ -22,11 +16,9 @@ describe('VoteComponent', () => {
 
   describe('downVote function', () => {
 
-    it('should decrement the totalVotes property set on the component', () => {
+    it('should', () => {
 
-      voteComponent.downVote();
       
-      expect(voteComponent.totalVotes).toEqual(-1);
 
     });
 
